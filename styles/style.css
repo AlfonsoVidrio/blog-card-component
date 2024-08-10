@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'Figtree';
+    src: url('../assets/fonts/static/Figtree-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Figtree';
+    src: url('../assets/fonts/static/Figtree-SemiBold.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+:root {
+    --yellow: hsl(47, 88%, 63%);
+    --white: hsl(0, 0%, 100%);
+    --gray-500: hsl(0, 0%, 42%);
+    --gray-950: hsl(0, 0%, 7%);
+
+    --font-text: 'Figtree', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    line-height: 150%;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: var(--yellow);
+    font-family: var(--font-text);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 384px;
+    height: 522px;
+    border-radius: 20px;
+    border: 1px solid var(--gray-950);
+    box-shadow: 8px 8px var(--gray-950);
+    background-color: var(--white);
+}
+
+.card-image {
+    display: flex;
+    justify-content: center;
+    margin: 24px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    margin-left:24px;
+}
+
+.card-category {
+    margin-top: 0px;
+    margin-bottom: 12px;
+    font-weight: bold;
+    background-color: var(--yellow);
+    width: fit-content;
+    padding: 4px 12px;
+    border-radius: 4px;
+}
+
+.card-date {
+    color: var(--gray-950);
+    margin-bottom: 12px;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 12px;
+}
+
+.card-description {
+    color: var(--gray-500);
+    margin: 0 0 24px;
+    font-size: 16px;
+}
+
+.card-user {
+    display: flex;
+    align-items: center;
+    margin-left: 24px;
+    font-weight: bold;
+    gap: 12px;
+}
+
+.card-user img {
+    width: 32px;
+    height: 32px;
+}
+
+@media (max-width:375px ) {
+    body{
+        font-size: 12px;
+    }
+
+    .card {
+        width: 327px;
+        height: 500px;
+    }
+    
+    .card-title {
+        font-size: 20px;
+    }
+    
+    .card-image,
+    .card-image img {
+        width: 279px;
+        height: auto ;
+    }
+
+}
